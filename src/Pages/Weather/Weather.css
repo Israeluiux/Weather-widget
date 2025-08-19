@@ -1,0 +1,133 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    letter-spacing: -0.5px;
+}
+
+.outer-container{
+    padding: 5rem 33%;
+    height: 80vh;
+    background-image: url(../../assets/pinksky.jpg);
+    background-size: cover;
+}
+
+
+.container {
+  background: rgba(255, 255, 255, 0.15); /* semi-transparent white */
+  backdrop-filter: blur(10px);           /* frosted blur */
+  border-radius: 60px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  padding: 2rem 1.5rem;
+  color: #fff; /* text color */
+  /* height: 20rem; */
+}
+
+.search{
+    width: 100%;
+    box-sizing: border-box;
+    height: 4rem;
+    border-radius: 30px;
+    border: none;
+    background: rgba(0, 0, 0, 0.15); /* semi-transparent white */
+    color: #fff;
+    font-size: 1.3rem;
+    padding-left: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+.userSearch{
+    display: flex;
+}
+
+.btn{
+    border-radius: 2rem;
+    border: none;
+    position: absolute;
+    padding: 1rem;
+    background: #1e2b1e;
+    color: #fff;
+    right: 2rem;
+    top: 2.5rem;
+    cursor: pointer;
+}
+
+.result{
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.15); 
+    border-radius: 30px;
+    display: flex;
+    gap: 1rem;
+    margin-bottom: .4rem;
+}
+
+.weathericon{
+    font-size: 4rem;
+}
+
+.condition{
+    font-size: 2rem;
+    font-weight: 600;
+    margin: .4rem 0;
+}
+
+.moredetails{
+    padding: 1rem;
+    border-radius: 30px;
+    background: #1e2b1e;
+    display: flex;
+    justify-content: space-around;
+}
+
+.windlevel{
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.more{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+span{
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+@media (max-width: 991px) {
+    .outer-container{
+    padding: 5rem 20%;
+}
+}
+
+@media (max-width: 750px) {
+    .outer-container{
+    padding: 5rem 15%;
+}
+}
+
+@media (max-width: 550px) {
+
+    html{
+        font-size: 90%;
+    }
+
+    .outer-container{
+    padding: 5rem 5%;
+    }
+
+    .condition{
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: .4rem 0;
+    }
+
+    .windlevel{
+        font-size: 1.5rem;
+    }
+}

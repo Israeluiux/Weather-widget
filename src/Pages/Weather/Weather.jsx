@@ -19,7 +19,7 @@ const Weather = () => {
 
     const weatherData = async () => {
         try {
-            let thedata = await axios.get(`http://api.openweathermap.org/data/2.5/forecast?q=${userInput}&appid=${apikey}`)
+            let thedata = await axios.get(`https://api.openweathermap.org/data/2.5/forecast?q=${userInput}&appid=${apikey}`)
             setNewdata(thedata.data)
             setUserError(null)
         } catch (error) {

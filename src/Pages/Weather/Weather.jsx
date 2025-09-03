@@ -4,11 +4,12 @@ import { useState, useEffect } from "react"
 
 
 const Weather = () => {
-    const apikey = 'ac969f608daad0e2235bf44b6272868e'
+    const apikey = import.meta.env.VITE_API_KEY;
     const [newdata, setNewdata] = useState(null)
     const [userInput, setUserInput] = useState("")
     const [showResult, setShowResult] = useState(false);
     const [userError, setUserError] = useState(null)
+    const [loading, setLoading] = useState(true)
 
    const displayCard = async () => {
         if (!userInput) return; // prevent empty search
@@ -22,6 +23,7 @@ const Weather = () => {
             let thedata = await axios.get(`https://api.openweathermap.org/data/2.5/forecast?q=${userInput}&appid=${apikey}`)
             setNewdata(thedata.data)
             setUserError(null)
+            setLoading(false)
         } catch (error) {
             setUserError("City not found, tryy again!!!")
             setNewdata(null)
@@ -31,7 +33,7 @@ const Weather = () => {
     // useEffect(() => {
     //     weatherData()
     // }, [userInput])
-    
+    // {loading && <div>Loading...</div>}
 
     return  (
         <div className="outer-container">
